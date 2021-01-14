@@ -5,9 +5,11 @@ from FlaskTemplate import app
 @app.route('/home')
 def home():
     """Renders the home page."""
-    # TODO: Create a query parameter so as to add our name to the URL like 
-    # https://first-project.azurewebsites.net/name=Grace
-    name = "</>"
+    
+    try:
+        name = request.args['name']
+    except:
+        name = "</>"
 
     return render_template(
         'index.html',
