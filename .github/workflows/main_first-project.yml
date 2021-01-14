@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Python app to Azure Web App - hbd-isha
+name: Build and deploy Python app to Azure Web App - first-project
 
 on:
   push:
@@ -18,17 +18,17 @@ jobs:
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
-        python-version: '3.7'
+        python-version: '3.6'
 
     - name: Build using AppService-Build
       uses: azure/appservice-build@v2
       with:
         platform: python
-        platform-version: '3.7'
+        platform-version: '3.6'
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'hbd-isha'
+        app-name: 'first-project'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8b03b5fcc5b441e7aacc3d8c98e6b1f3 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_26fa467ff5cb43d6b2ba1e3e522da11d }}
