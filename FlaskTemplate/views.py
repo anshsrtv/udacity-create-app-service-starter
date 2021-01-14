@@ -1,7 +1,6 @@
 from flask import render_template, request
 from FlaskTemplate import app
 
-# TODO: Replace YOUR_NAME with your name e.g. Grace 
 @app.route('/')
 @app.route('/home')
 def home():
@@ -12,7 +11,7 @@ def home():
 
     return render_template(
         'index.html',
-        # TODO: Display the name on the website.
+        # Display the name on the website.
         name = name
     )
 
